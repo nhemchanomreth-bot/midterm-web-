@@ -1,51 +1,81 @@
 # Library REST API
+### ប្រព័ន្ធ REST API សម្រាប់បណ្ណាល័យ
 
-A midterm project built with Node.js core modules. It uses `http.createServer`, CommonJS modules, JSON files, and `EventEmitter`; it does not use Express.
+**SETEC Institute · WBD I · Midterm Project · Class SW33**
 
-## Run
+A REST API for a small library (books, members, loans), built with pure Node.js core modules only (`http`, `fs.promises`, `events`). **No Express.**
 
-```sh
+REST API សម្រាប់គ្រប់គ្រងបណ្ណាល័យ (សៀវភៅ សមាជិក និងការខ្ចី) សរសេរដោយ Node.js សុទ្ធ គ្មានប្រើ Express ទេ។
+
+---
+
+## Run / របៀបដំណើរការ
+
+```
 npm install
 npm start
 ```
 
-The API listens on port 3000 by default. Set `PORT` to change it. Records are stored in `data/` and the activity log is written to `activity.log` in the project folder.
-
-For automatic restarts during development, run `npm run dev`. Run `npm run check` for the included API self-check.
-
-## Routes
-
-All responses use JSON.
-
-| Method | Path | Purpose |
+| Command | English | ខ្មែរ |
 | --- | --- | --- |
-| GET | `/` | API welcome and resource paths |
-| GET, POST | `/books` | List or create books (`name`, optional `note`) |
-| GET, PUT, DELETE | `/books/:id` | Read, update, or delete a book |
-| GET, POST | `/members` | List or create members (`name`, optional `phone`) |
-| GET, PUT, DELETE | `/members/:id` | Read, update, or delete a member |
-| GET, POST | `/loans` | List loans or borrow a book (`itemId`, `personId`) |
-| GET, DELETE | `/loans/:id` | Read or delete a loan |
-| PUT | `/loans/:id/end` | End an active loan |
+| `npm start` | Start server at http://localhost:3000 | បើក Server |
+| `npm run dev` | Start with auto-reload | បើក Server ជាមួយ auto-reload |
+| `npm run check` | Run the self-test | រត់តេស្តស្វ័យប្រវត្តិ |
 
-Loan creation checks that the book and member exist and prevents lending a book that already has an active loan. Ending the loan makes the book available again.
+---
 
-## File ownership
+## API Routes / បញ្ជី Routes
 
-Replace the names below with your real group members if they differ:
+| Method | Endpoint | English | ខ្មែរ |
+| --- | --- | --- | --- |
+| GET | `/` | Welcome message | សារស្វាគមន៍ |
+| GET | `/books` | List all books | មើលសៀវភៅទាំងអស់ |
+| POST | `/books` | Create a book | បង្កើតសៀវភៅ |
+| GET / PUT / DELETE | `/books/:id` | Read / update / delete a book | មើល / កែ / លុបសៀវភៅ |
+| GET | `/members` | List all members | មើលសមាជិកទាំងអស់ |
+| POST | `/members` | Create a member | បង្កើតសមាជិក |
+| GET / PUT / DELETE | `/members/:id` | Read / update / delete a member | មើល / កែ / លុបសមាជិក |
+| GET | `/loans` | List all loans | មើលការខ្ចីទាំងអស់ |
+| POST | `/loans` | Borrow a book | ខ្ចីសៀវភៅ |
+| PUT | `/loans/:id/end` | Return a book | សងសៀវភៅ |
 
-- Core (LEADER: Omareth): `server.js`, `router.js`, `activity.js`, `README.md`
-- Books (ITEM: Phin Sopheaktra): `resources/books.js`
-- Members (PERSON: Phirom Sok): `resources/members.js`
-- Loans (LINK: Run Manil): `resources/loans.js`
-- Shared helpers: `lib/`
+**Status codes / កូដឆ្លើយតប:**
+`200` OK · `201` Created · `400` Bad request · `404` Not found · `405` Method not allowed · `409` Conflict · `413` Payload too large
 
-Each resource file is standalone (its own `loadData`, `saveData`, `findById` and CRUD handler) and exports `path`, `handle`, `findById`.
+---
 
-## Security and performance
+## Team / ក្រុមការងារ
 
-- Request bodies are limited to 1MB (`413 Payload Too Large`), collected with `Buffer.concat()`.
-- `JSON.parse` errors return `400`; `__proto__`, `constructor` and `prototype` keys are removed.
-- Every response sends `X-Content-Type-Options: nosniff` and `X-Frame-Options: DENY`.
-- Data files are pre-loaded into memory at startup, so `GET` requests do not read the disk; writes use `fs.promises`.
-- Non-GET requests to `/` return `405`.
+| Member / សមាជិក | Role / តួនាទី | Files / ឯកសារ |
+| --- | --- | --- |
+| **Omareth** | Leader (Core) / មេក្រុម | `server.js` `router.js` `activity.js` `README.md` |
+| **Phin Sopheaktra** | Books (ITEM) / សៀវភៅ | `resources/books.js` |
+| **Phirom Sok** | Members (PERSON) / សមាជិក | `resources/members.js` |
+| **Run Manil** | Loans (LINK) / ការខ្ចី | `resources/loans.js` |
+
+---
+
+## Structure / រចនាសម្ព័ន្ធ
+
+```
+server.js        → starts the HTTP server / បើក Server
+router.js        → routes requests / បញ្ជូន Request
+activity.js      → writes activity.log / កត់ត្រា Log
+resources/       → books, members, loans
+lib/             → shared helpers (events, body, send)
+data/            → JSON data files / ទិន្នន័យ JSON
+```
+
+**Flow / ដំណើរការ:**
+`Client → server.js → router.js → resource → data/*.json → event → activity.js → activity.log`
+
+---
+
+## Features / លក្ខណៈពិសេស
+
+- 1MB request limit (`413`) / កំណត់ទំហំ Request ត្រឹម 1MB
+- Safe JSON parsing (`400`) / ការពារ JSON ខុស
+- Prototype pollution defense / ការពារ `__proto__`
+- Security headers: `nosniff`, `X-Frame-Options: DENY`
+- In-memory cache for fast reads / រក្សាទុកក្នុង memory ឱ្យអានលឿន
+- Data survives restart; IDs never reused / ទិន្នន័យមិនបាត់ពេលបិទបើកថ្មី
