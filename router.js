@@ -1,4 +1,4 @@
-// Routing logic by Omareth
+// Routing logic by Omareth.
 const send = require('./lib/send');
 const readBody = require('./lib/body');
 const resources = [
