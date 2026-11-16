@@ -1,4 +1,4 @@
-// Owner: Omareth (Core / Leader)
+// Core setup by Omareth
 const http = require('http');
 const config = require('./config');
 require('./activity');
