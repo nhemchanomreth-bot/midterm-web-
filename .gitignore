@@ -1,0 +1,7 @@
+node_modules/
+.env
+data/*.json
+data/*.log
+activity.log
+data/*.sequence
+npm-debug.log*

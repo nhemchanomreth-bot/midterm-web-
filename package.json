@@ -1,0 +1,14 @@
+{
+  "name": "library-rest-api-midterm",
+  "version": "1.0.0",
+  "description": "Library REST API built with Node.js core modules for the WBD I midterm project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "check": "node check.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
