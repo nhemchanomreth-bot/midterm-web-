@@ -1,4 +1,5 @@
-// (owner: Manil)
+// Initial setup by Manil
+// Data handling logic
 const fs = require('fs').promises;
 const path = require('path');
 const config = require('../config');
