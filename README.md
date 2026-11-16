@@ -1,5 +1,5 @@
-# Library REST API
-### ប្រព័ន្ធ REST API សម្រាប់បណ្ណាល័យ
+Library REST API
+ ប្រព័ន្ធ REST API សម្រាប់បណ្ណាល័យ
 
 **SETEC Institute · WBD I · Midterm Project · Class SW33**
 
@@ -9,7 +9,7 @@ REST API សម្រាប់គ្រប់គ្រងបណ្ណាល័�
 
 ---
 
-## Run / របៀបដំណើរការ
+ Run / របៀបដំណើរការ
 
 ```
 npm install
@@ -71,7 +71,7 @@ data/            → JSON data files / ទិន្នន័យ JSON
 
 ---
 
-## Features / លក្ខណៈពិសេស
+ Features / លក្ខណៈពិសេស
 
 - 1MB request limit (`413`) / កំណត់ទំហំ Request ត្រឹម 1MB
 - Safe JSON parsing (`400`) / ការពារ JSON ខុស
