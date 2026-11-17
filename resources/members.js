@@ -1,4 +1,8 @@
+// Initial setup by Phirom
+// Data handling for membersgit add resources/members.js
+// Final review by Phirom
 // resources/members.js - Members (PERSON) resource (owner: Phirom Sok)
+
 const fs = require('fs').promises;
 const path = require('path');
 const config = require('../config');
