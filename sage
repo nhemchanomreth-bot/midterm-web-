@@ -1,0 +1,68 @@
+[33mcommit 01265fdd27bf55abb9b5a0c25e5bde80801c4484[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/Manil[m[33m)[m
+Author: unknown <runmanil7777@gmail.com>
+Date:   Tue Nov 17 02:14:53 2026 +0700
+
+    commit 3
+
+[33mcommit 0a9dc0d1388c2aff0d5aa38fd716a59247caeb26[m
+Author: unknown <runmanil7777@gmail.com>
+Date:   Tue Nov 17 02:14:22 2026 +0700
+
+    commit 2
+
+[33mcommit a06e7ff51afe193df3abbcf2f640751f37dcb50d[m
+Author: unknown <runmanil7777@gmail.com>
+Date:   Tue Nov 17 02:13:48 2026 +0700
+
+    commit 1
+
+[33mcommit 6a1622d5d338e43d0b4b2c4bd28a6406a6bed7bd[m
+Author: unknown <runmanil7777@gmail.com>
+Date:   Tue Nov 17 02:11:53 2026 +0700
+
+    commit 1
+
+[33mcommit b95ec24431910ac50a331411985a2ea07aa7d765[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mfeature-Manil[m[33m)[m
+Merge: 9133582 8ab8043
+Author: nhemchanomreth-bot <nhemchanomreth@gmail.com>
+Date:   Tue Nov 17 01:40:16 2026 +0700
+
+    Merge pull request #1 from nhemchanomreth-bot/feature/omareth
+    
+    Feature/omareth
+
+[33mcommit 8ab804331a9ceb91e2a8a4b9d7fe59c79a634323[m
+Author: Omreth <nhemchanomreth@gmail.com>
+Date:   Tue Nov 17 01:28:42 2026 +0700
+
+    commit 2
+
+[33mcommit 981ecda0afd943736d9d1ab4bbd1a79d23bb417a[m
+Author: Omreth <nhemchanomreth@gmail.com>
+Date:   Tue Nov 17 01:25:12 2026 +0700
+
+    commit 2
+
+[33mcommit 37cf619bd26712b018901f161ac30519068dcddf[m
+Author: Omreth <nhemchanomreth@gmail.com>
+Date:   Tue Nov 17 01:23:47 2026 +0700
+
+    commit 1
+
+[33mcommit 91335823fe5c3bdfe023ca9d960aeeed24d9a7b1[m
+Author: nhemchanomreth-bot <nhemchanomreth@gmail.com>
+Date:   Tue Nov 17 00:49:18 2026 +0700
+
+    Fix formatting in README.md headings
+
+[33mcommit a6fd73bcfef8b852733aff5075e900f8af78a56c[m
+Author: Omreth <nhemchanomreth@gmail.com>
+Date:   Tue Nov 17 00:37:06 2026 +0700
+
+    Update README with group roles
+
+[33mcommit 0ff56c45fbc1f1605dacea0a85e25081803b7624[m
+Author: Omreth <nhemchanomreth@gmail.com>
+Date:   Tue Nov 17 00:20:02 2026 +0700
+
+    chore: initial project
