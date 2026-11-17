@@ -1,4 +1,5 @@
 // Initial setup by Phirom
+// Data handling for members
 // resources/members.js - Members (PERSON) resource (owner: Phirom Sok)
 
 const fs = require('fs').promises;
