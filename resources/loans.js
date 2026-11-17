@@ -1,4 +1,5 @@
 // Initial setup by Manil
+// Data handling for loans
 const fs = require('fs').promises;
 const path = require('path');
 const config = require('../config');
