@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Dune",
+    "note": "Sci-Fi"
+  },
+  {
+    "id": 2,
+    "name": "Harry Potter",
+    "note": "Fantasy"
+  },
+  {
+    "id": 3,
+    "name": "The Alchemist",
+    "note": "Fiction"
+  },
+  {
+    "id": 4,
+    "name": "Clean Code",
+    "note": "Programming"
+  }
+]

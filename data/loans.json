@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "itemId": 1,
+    "personId": 1,
+    "startedAt": "2026-11-16T19:41:36.910Z",
+    "endedAt": null
+  },
+  {
+    "id": 2,
+    "itemId": 2,
+    "personId": 2,
+    "startedAt": "2026-11-16T19:41:36.965Z",
+    "endedAt": "2026-11-16T19:41:38.189Z"
+  },
+  {
+    "id": 3,
+    "itemId": 4,
+    "personId": 3,
+    "startedAt": "2026-11-16T19:41:37.002Z",
+    "endedAt": null
+  }
+]
