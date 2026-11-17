@@ -1,4 +1,6 @@
+// Initial setup by Phirom
 // resources/members.js - Members (PERSON) resource (owner: Phirom Sok)
+
 const fs = require('fs').promises;
 const path = require('path');
 const config = require('../config');
